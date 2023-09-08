@@ -106,29 +106,30 @@ nav li:nth-of-type(1) a {
 }
 
 .mobile-nav-label {
+  
   position: relative;
   display: flex;
-  flex-direction: column;
+  /* justify-content: center; */
   align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  height: 4em;
   width: 4em;
+  height: 4em;
+  /* padding-block: 2em; */
   cursor: pointer;
-  background-color: var(--dark-color);
-  transition: background-color 1s ease;
-  /* border: 1px solid var(--light-color); */
 }
 
-.mobile-nav-label span
+.mobile-nav-label span,
+.mobile-nav-label::before,
+.mobile-nav-label::after
 {
   width: 2rem;
   height: 3px;
-  border-radius: 10px;
+  margin-inline: auto;
+  border-radius: 5px;
   background-color: var(--light-color);
-  transition: all 0.6s ease;
+  transition: 0.2s ease;
+  z-index: 999;
 }
-/* 
+
 .mobile-nav-label::before,
 .mobile-nav-label::after {
   content: '';
@@ -136,12 +137,33 @@ nav li:nth-of-type(1) a {
 }
 
 .mobile-nav-label::before {
-  top: 21px;
+  top: 22px;
+  left: 1em;
 }
 
 .mobile-nav-label::after {
   bottom: 21px;
-} */
+  left: 1em;
+}
+
+.mobile-nav-label span {
+  opacity: 1;
+}
+
+header:has(input:checked) .mobile-nav-label::before {
+  top: 30px;
+  rotate: -45deg;
+  /* left: 1px; */
+}
+
+header:has(input:checked) .mobile-nav-label::after {
+  bottom: 30px;
+  rotate: 45deg;
+}
+header:has(input:checked) .mobile-nav-label span {
+opacity: 0;
+}
+
 
 
 
@@ -191,53 +213,4 @@ nav li:nth-of-type(1) a {
       color: #fff;
       border: 1px solid #eee;
   }
-}
-
-/* flex type */
-.flex-1 {
-  flex: 1;
-}
-
-.flex-2 {
-  flex: 2;
-}
-
-.flex-3 {
-  flex: 3;
-}
-
-.flex-4 {
-  flex: 4;
-}
-
-.flex-5 {
-  flex: 5;
-}
-
-.flex-6 {
-  flex: 6;
-}
-
-.flex-7 {
-  flex: 7;
-}
-
-.flex-8 {
-  flex: 8;
-}
-
-.flex-9 {
-  flex: 9;
-}
-
-.flex-10 {
-  flex: 10;
-}
-
-.flex-11 {
-  flex: 11;
-}
-
-.flex-12 {
-  flex: 12
 }
