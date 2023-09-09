@@ -34,6 +34,7 @@ body {
   font-family: 'Courier New', Courier, monospace;
   font-size: var(--fs-4000);
   background-color: var(--dark-dark);
+  min-height: 100vh;
 }
 
 a {
